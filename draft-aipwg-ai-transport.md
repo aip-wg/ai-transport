@@ -5,6 +5,9 @@ category: exp
 workgroup: AIP-WG
 keyword: Internet-Draft, AI, Transport Protocol
 
+submissionType: independent
+ipr: none
+
 stand_alone: yes
 pi: [toc, sortrefs, symrefs]
 
@@ -66,9 +69,9 @@ The scope of this document includes the design and specification of a transport 
 - **Transport Protocol**: A protocol designed to facilitate the exchange of data between systems, ensuring efficient and secure communication.
 - **Factual Integrity**: The quality of information being true, accurate, and free from distortion or misrepresentation.
 
-# Protocol Overview  
+# Protocol Overview
 
-## Basic Concepts  
+## Basic Concepts
 ### Media over QUIC (MOQ)
 
 ### Transport
@@ -110,16 +113,18 @@ Pre-written templates that help users accomplish specific tasks
 - **MCP Server**: Content sourced from MCP servers, which provide verified and authoritative data for AI systems.
 - **Local Resource**: A resource that is located within a local environment, such as a database or file system, providing content that is directly accessible by the AI agent.
 
-## Protocol Architecture  
+## Protocol Architecture
 
-# Protocol Specification  
+# Protocol Specification
 
-## Message Format  
-### 
+## Message Format
+### RESOURCE
+### TOOL
+### PROMPT
 
-## Transport Mechanisms  
+## Transport Mechanisms
 
-## Security Considerations  
+## Security Considerations
 
 # Implementation Guidelines
 
