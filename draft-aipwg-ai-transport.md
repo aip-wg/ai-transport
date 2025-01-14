@@ -32,7 +32,9 @@ AIP is designed to provide a framework for seamless integration of AI-powered co
 --- middle
 
 # Introduction
+
 ## Motivation
+
 ### Leveraging AI Agents
 AI Agents have the potential to revolutionize various domains by automating and enhancing data exchange, decision-making, and interactions with external systems. However, their widespread adoption depends on ensuring that they are equipped with accurate, accessible, and verifiable data. This protocol aims to provide the framework that AI agents can use to interact with data sources effectively while ensuring minimal risk of misinformation and guaranteeing that AI-driven outputs are reliable.
 
@@ -52,6 +54,7 @@ To ensure the reliability and transparency of AI-generated outputs, it is necess
 Reducing latency in communication between AI agents and data sources is vital for ensuring responsive and real-time interactions. The protocol establishes guidelines for minimizing latency and ensuring that AI agents can efficiently process and respond to data requests in a timely manner. Optimized transport mechanisms will contribute to lowering delays and improving the overall user experience.
 
 ## Purpose
+
 ### MCP Server Network
 Establish a robust network of Model Content Protocol (MCP) servers to facilitate seamless communication between AI agents and various external data sources. This network will serve as the backbone for enabling efficient data retrieval, processing, and integration into AI systems, ensuring smooth and consistent interactions across different platforms.
 
@@ -71,6 +74,7 @@ The scope of this document includes the design and specification of a transport 
 # Protocol Overview
 
 ## Basic Concepts
+
 ### Media over QUIC (MOQ)
 
 ### Transport
@@ -117,8 +121,16 @@ Pre-written templates that help users accomplish specific tasks
 # Protocol Specification
 
 ## Message Format
+
 ### RESOURCE
+
 ### TOOL
+~~~
+PROMPT {
+   Message (b)
+}
+~~~
+
 ### PROMPT
 ~~~
 PROMPT {
