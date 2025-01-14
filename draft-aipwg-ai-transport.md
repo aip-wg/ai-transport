@@ -16,8 +16,11 @@ author:
    organization: FOALK
    email: daichi1616.kytuniv@gmail.com
  - name: Uno Shinichiro
+   organization: Protoduct
  - name: Yamauchi Taiga
+   organization: Protoduct
  - name: Gyungwook Lee
+   organization: Protoduct
 
 normative:
 informative:
@@ -29,11 +32,7 @@ AIP is designed to provide a framework for seamless integration of AI-powered co
 --- middle
 
 # Introduction
-a
-
 ## Motivation
-a
-
 ### Leveraging AI Agents
 AI Agents have the potential to revolutionize various domains by automating and enhancing data exchange, decision-making, and interactions with external systems. However, their widespread adoption depends on ensuring that they are equipped with accurate, accessible, and verifiable data. This protocol aims to provide the framework that AI agents can use to interact with data sources effectively while ensuring minimal risk of misinformation and guaranteeing that AI-driven outputs are reliable.
 
