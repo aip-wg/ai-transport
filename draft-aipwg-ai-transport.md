@@ -91,7 +91,6 @@ A single resource delivered as a "track" within the MOQ system. A track may refe
 
 ### Subscription
 
-
 ### Relay
 The MOQ relay is a component that facilitates the transfer of data between AI agents and external resources, ensuring that communication is efficient and reliable.
 
