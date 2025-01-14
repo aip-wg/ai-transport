@@ -1,7 +1,7 @@
 ---
 title: "AI Transport Protocol"
 docname: draft-aipwg-ai-transport-latest
-category: experimental
+category: exp
 workgroup: AIP-WG
 keyword: Internet-Draft, AI, Transport Protocol
 
