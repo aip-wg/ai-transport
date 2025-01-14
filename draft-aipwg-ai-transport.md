@@ -122,6 +122,11 @@ Pre-written templates that help users accomplish specific tasks
 ## Message Format
 
 ### RESOURCE
+~~~
+PROMPT {
+   Message (b)
+}
+~~~
 
 ### TOOL
 ~~~
