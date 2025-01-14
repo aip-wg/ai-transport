@@ -121,6 +121,11 @@ Pre-written templates that help users accomplish specific tasks
 ### RESOURCE
 ### TOOL
 ### PROMPT
+~~~
+PROMPT {
+   Message (b)
+}
+~~~
 
 ## Transport Mechanisms
 
