@@ -20,7 +20,6 @@ author:
 
 normative:
 informative:
-
 ---
 
 abstract
