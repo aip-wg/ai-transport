@@ -24,7 +24,7 @@ informative:
 
 AIP is designed to provide a framework for seamless integration of AI-powered communication systems, ensuring that AI agents can interact effectively with diverse web resources, facilitate efficient data exchanges, and ensure both factual accuracy and security within transportation protocols. This document outlines the key principles, concepts, and specifications for the AI Transport Protocol (AIP).
 
----
+--- middle
 
 # Introduction
 ## Motivation
