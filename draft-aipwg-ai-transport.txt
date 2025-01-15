@@ -24,7 +24,7 @@ Discussion Venues
    This note is to be removed before publishing as an RFC.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/OkutaniDaichi0106/ai-transport.
+   https://github.com/aip-wg/ai-transport.
 
 Table of Contents
 
