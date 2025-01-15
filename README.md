@@ -2,16 +2,16 @@
 
 This is the working area for the individual Internet-Draft, "AI Transport Protocol".
 
-* [Editor's Copy](https://OkutaniDaichi0106.github.io/ai-transport/#go.draft-aipwg-ai-transport.html)
+* [Editor's Copy](https://aip-wg.github.io/ai-transport/#go.draft-aipwg-ai-transport.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-aipwg-ai-transport)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-aipwg-ai-transport)
-* [Compare Editor's Copy to Individual Draft](https://OkutaniDaichi0106.github.io/ai-transport/#go.draft-aipwg-ai-transport.diff)
+* [Compare Editor's Copy to Individual Draft](https://aip-wg.github.io/ai-transport/#go.draft-aipwg-ai-transport.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/OkutaniDaichi0106/ai-transport/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/aip-wg/ai-transport/blob//CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
