@@ -184,7 +184,6 @@ MCP messages are JSON-RPC 2.0 style.
 ### REQUEST Structure
 
 ~~~json
-REQUEST Structure 
 {
   id: Request ID (i),
   method: Method Name (b),
@@ -200,7 +199,6 @@ REQUEST Structure
 ### RESULT Structure
 
 ~~~json
-RESULT Structure 
 {
   id: Request ID (i),
   [key: Responce Key (b)]: Responce Value (b),
@@ -210,7 +208,6 @@ RESULT Structure
 ### ERROR Structure
 
 ~~~json
-ERROR Message 
 {
   code: Error Code (i),
   reason: Reason (b),
@@ -219,7 +216,6 @@ ERROR Message
 
 ### NOTIFICATION Structure
 ~~~json
-NOTIFICATION Structure 
 {
   id: Notification ID (i),
   method: Method Name (b),
@@ -235,19 +231,7 @@ NOTIFICATION Structure
 
 ### RESOURCE
 
-~~~json
-PROMPT {
-   Message (b)
-}
-~~~
-
 ### TOOL
-
-~~~json
-PROMPT {
-   Message (b)
-}
-~~~
 
 ### PROMPT Structure
 
@@ -267,7 +251,6 @@ PROMPT {
 ### Concept Mapping
 
 - "prompts/list" endpoint -> A Track named "prompts"
-- 
 
 ## Transport Mechanisms
 
@@ -284,9 +267,11 @@ The server announce ...
 
 ### Subscribe
 
+Reserved Tracks
+
 ### Fetch
 
-### 
+### Terminate
 
 # Implementation Guidelines
 
