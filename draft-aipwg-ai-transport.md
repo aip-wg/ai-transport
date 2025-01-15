@@ -183,8 +183,8 @@ MCP messages are JSON-RPC 2.0 style.
 
 ### REQUEST Structure
 
-~~~json
-{
+~~~text
+REQUEST {
   id: Request ID (i),
   method: Method Name (b),
   parameters: [
@@ -198,8 +198,8 @@ MCP messages are JSON-RPC 2.0 style.
 
 ### RESULT Structure
 
-~~~json
-{
+~~~text
+RESULT {
   id: Request ID (i),
   [key: Responce Key (b)]: Responce Value (b),
 }
@@ -207,16 +207,16 @@ MCP messages are JSON-RPC 2.0 style.
 
 ### ERROR Structure
 
-~~~json
-{
+~~~text
+ERROR {
   code: Error Code (i),
   reason: Reason (b),
   data: Data (b),
 }
 
 ### NOTIFICATION Structure
-~~~json
-{
+~~~text
+NOTIFICATION {
   id: Notification ID (i),
   method: Method Name (b),
   arguments: 
@@ -235,8 +235,8 @@ MCP messages are JSON-RPC 2.0 style.
 
 ### PROMPT Structure
 
-~~~json
-{
+~~~text
+PROMPT {
   name: Prompt Name (b),
   parameters?: [
     {
