@@ -135,6 +135,10 @@ MCP clients comminucate with MCP servers and accesses to modified resources thro
 The Resources of the MCP concept.
 Every resources maps to a single track.
 
+- **Remote Resource**: A resource that is served from a remote server, such as an API response.
+
+- **Local Resource**: A resource that is located within a local environment, such as a database or file system, providing content that is directiory accessible by the AI agent.
+
 ### Tools
 
 The Tools of the MCP concept.
@@ -145,33 +149,33 @@ Functions that can be called by the LLM
 The Prompts of the MCP concept.
 Pre-written templates that help users accomplish specific tasks
 
-## Request-Responce
+### Request-Response
 
-A endpoint request to the other endpoint with REQUEST message. The other endpoint verifies if they has a method matches to the Method Name and handles the Parameters. The endpoint received request respond to the request by sending a RESULT message.
+An endpoint sends a REQUEST message to another endpoint. The receiving endpoint verifies if it has a method that matches the Method Name and processes the Parameters. The endpoint that received the request responds by sending a RESULT message.
 
-## Notification
+### Notification
 
-A endpoint inform what methods they have by sending NOTIFICATION message to the other endpoint.
+An endpoint informs other endpoints about the methods it supports by sending a NOTIFICATION message.
 
-## Verification Level
+## Verification Levels
 
-Verification level indicates how the generated data is reliable.
+Verification levels indicate the reliability of the generated data.
 
-### Individual Comment
+### Level 3: Official Pronouncements
 
-Content generated from individual comments on the web, which may vary in reliability and should be verified for accuracy.
+Content generated from authoritative sources, such as government reports or officially published information, which carries a high level of reliability.
 
-### Official Pronouncement
+### Level 2: Corporate and Industry Sources
 
-Content generated from authoritative sources, such as government reports or officially published information, which carries a higher level of reliability.
+Content generated from corporate websites, industry reports, and professional publications. These sources are generally reliable but should still be verified.
 
-### Remote Resource
+### Level 1: Individual Comments
 
-A resouce that is served from a remote server, such as API responce.
+Content generated from individual comments on the web, such as social media posts, blog entries, and forum discussions. These sources vary in reliability and should be verified for accuracy.
 
-### Local Resource
+### Level 0: Unverified Content
 
-A resource that is located within a local environment, such as a database or file system, providing content that is directly accessible by the AI agent.
+Content from anonymous sources or user-generated content that has not been verified. This level carries the lowest reliability.
 
 ## Protocol Architecture
 
@@ -255,14 +259,11 @@ PROMPT {
 
 ### Set up
 
-A session is the MOQT session and is established by a client dialing to a server.
-Any additional information required to be exchanged when set up SHOULD be sent as an extention of the MOQ set up messages.
+A session is established by a client connecting to a server using the MOQ (Media over QUIC) protocol. During the setup phase, the client initiates a connection request to the server. Any additional information required for the session, such as authentication tokens or configuration parameters, should be included as extensions to the MOQ setup messages. This ensures that both the client and server have all necessary information to establish a secure and efficient communication channel.
 
 ### Announce
 
-Endpoints can know what resource they can access using MOQT announce negotiation.
-This negotiation starts with a subscriber let a publisher know what resources they are interested in and then the publisher respond any announcement.
-The server announce ...
+Endpoints can discover available resources through MOQ announce negotiation. This process begins with a subscriber indicating to a publisher the specific resources they are interested in. The publisher then responds with an announcement detailing the available resources. This negotiation allows for dynamic resource discovery and ensures that subscribers are aware of the resources they can access. The server's announcement includes metadata about the resources, such as their type, availability, and any access restrictions.
 
 ### Subscribe
 
