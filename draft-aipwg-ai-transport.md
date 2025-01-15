@@ -219,8 +219,7 @@ ERROR {
 NOTIFICATION {
   id: Notification ID (i),
   method: Method Name (b),
-  arguments: 
-  [
+  arguments: [
     {
       id: Argument ID (i),
       type: Argument Type (i),
