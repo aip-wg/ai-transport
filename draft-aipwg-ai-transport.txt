@@ -57,14 +57,14 @@ Table of Contents
        2.2.3.  Resources
        2.2.4.  Tools
        2.2.5.  Prompts
-     2.3.  Request-Responce
-     2.4.  Notification
-     2.5.  Verification Level
-       2.5.1.  Individual Comment
-       2.5.2.  Official Pronouncement
-       2.5.3.  Remote Resource
-       2.5.4.  Local Resource
-     2.6.  Protocol Architecture
+       2.2.6.  Request-Response
+       2.2.7.  Notification
+     2.3.  Verification Levels
+       2.3.1.  Level 3: Official Pronouncements
+       2.3.2.  Level 2: Corporate and Industry Sources
+       2.3.3.  Level 1: Individual Comments
+       2.3.4.  Level 0: Unverified Content
+     2.4.  Protocol Architecture
    3.  MCP Endpoints Interactions
      3.1.  MCP Messages
        3.1.1.  REQUEST Structure
@@ -281,6 +281,13 @@ Table of Contents
    The Resources of the MCP concept.  Every resources maps to a single
    track.
 
+   *  *Remote Resource*: A resource that is served from a remote server,
+      such as an API response.
+
+   *  *Local Resource*: A resource that is located within a local
+      environment, such as a database or file system, providing content
+      that is directiory accessible by the AI agent.
+
 2.2.4.  Tools
 
    The Tools of the MCP concept.  Functions that can be called by the
@@ -291,44 +298,46 @@ Table of Contents
    The Prompts of the MCP concept.  Pre-written templates that help
    users accomplish specific tasks
 
-2.3.  Request-Responce
+2.2.6.  Request-Response
 
-   A endpoint request to the other endpoint with REQUEST message.  The
-   other endpoint verifies if they has a method matches to the Method
-   Name and handles the Parameters.  The endpoint received request
-   respond to the request by sending a RESULT message.
+   An endpoint sends a REQUEST message to another endpoint.  The
+   receiving endpoint verifies if it has a method that matches the
+   Method Name and processes the Parameters.  The endpoint that received
+   the request responds by sending a RESULT message.
 
-2.4.  Notification
+2.2.7.  Notification
 
-   A endpoint inform what methods they have by sending NOTIFICATION
-   message to the other endpoint.
+   An endpoint informs other endpoints about the methods it supports by
+   sending a NOTIFICATION message.
 
-2.5.  Verification Level
+2.3.  Verification Levels
 
-   Verification level indicates how the generated data is reliable.
+   Verification levels indicate the reliability of the generated data.
 
-2.5.1.  Individual Comment
-
-   Content generated from individual comments on the web, which may vary
-   in reliability and should be verified for accuracy.
-
-2.5.2.  Official Pronouncement
+2.3.1.  Level 3: Official Pronouncements
 
    Content generated from authoritative sources, such as government
-   reports or officially published information, which carries a higher
+   reports or officially published information, which carries a high
    level of reliability.
 
-2.5.3.  Remote Resource
+2.3.2.  Level 2: Corporate and Industry Sources
 
-   A resouce that is served from a remote server, such as API responce.
+   Content generated from corporate websites, industry reports, and
+   professional publications.  These sources are generally reliable but
+   should still be verified.
 
-2.5.4.  Local Resource
+2.3.3.  Level 1: Individual Comments
 
-   A resource that is located within a local environment, such as a
-   database or file system, providing content that is directly
-   accessible by the AI agent.
+   Content generated from individual comments on the web, such as social
+   media posts, blog entries, and forum discussions.  These sources vary
+   in reliability and should be verified for accuracy.
 
-2.6.  Protocol Architecture
+2.3.4.  Level 0: Unverified Content
+
+   Content from anonymous sources or user-generated content that has not
+   been verified.  This level carries the lowest reliability.
+
+2.4.  Protocol Architecture
 
 3.  MCP Endpoints Interactions
 
@@ -402,17 +411,26 @@ Table of Contents
 
 3.2.1.  Set up
 
-   A session is the MOQT session and is established by a client dialing
-   to a server.  Any additional information required to be exchanged
-   when set up SHOULD be sent as an extention of the MOQ set up
-   messages.
+   A session is established by a client connecting to a server using the
+   MOQ (Media over QUIC) protocol.  During the setup phase, the client
+   initiates a connection request to the server.  Any additional
+   information required for the session, such as authentication tokens
+   or configuration parameters, should be included as extensions to the
+   MOQ setup messages.  This ensures that both the client and server
+   have all necessary information to establish a secure and efficient
+   communication channel.
 
 3.2.2.  Announce
 
-   Endpoints can know what resource they can access using MOQT announce
-   negotiation.  This negotiation starts with a subscriber let a
-   publisher know what resources they are interested in and then the
-   publisher respond any announcement.  The server announce ...
+   Endpoints can discover available resources through MOQ announce
+   negotiation.  This process begins with a subscriber indicating to a
+   publisher the specific resources they are interested in.  The
+   publisher then responds with an announcement detailing the available
+   resources.  This negotiation allows for dynamic resource discovery
+   and ensures that subscribers are aware of the resources they can
+   access.  The server's announcement includes metadata about the
+   resources, such as their type, availability, and any access
+   restrictions.
 
 3.2.3.  Subscribe
 
